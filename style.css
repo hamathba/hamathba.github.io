@@ -18,12 +18,14 @@ body {
     color: white;
     text-align: center;
     padding: 20px;
+    position: relative; /* Pour positionner le logo */
 }
 
 .banner header {
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
+    position: relative;
 }
 
 .banner h1 {
@@ -34,6 +36,24 @@ body {
 .banner p {
     margin: 10px 0 0;
     font-size: 1rem; /* Taille réduite pour les mobiles */
+}
+
+/* Logo aligné à gauche */
+.logo-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+}
+
+/* Logo aligné à droite (optionnel) */
+.logo-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: auto;
 }
 
 /* À propos */
@@ -84,27 +104,6 @@ body {
     font-size: 1.5rem; /* Taille réduite pour les mobiles */
     color: #003366;
     margin-bottom: 10px;
-}
-
-/* Témoignages */
-.testimonials {
-    padding: 20px;
-    background: white;
-    text-align: center;
-}
-
-.testimonials h2 {
-    font-size: 1.5rem; /* Taille réduite pour les mobiles */
-    margin-bottom: 15px;
-}
-
-.testimonial-item {
-    background: #f9f9f9;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0; /* Marge verticale pour les mobiles */
-    width: 100%; /* Pleine largeur sur mobile */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact */
@@ -197,20 +196,20 @@ footer .social-links a:hover {
         font-size: 1.2rem; /* Taille originale pour les tablettes et ordinateurs */
     }
 
-    .about h2, .services h2, .testimonials h2, .contact h2 {
+    .about h2, .services h2, .contact h2 {
         font-size: 2rem; /* Taille originale pour les tablettes et ordinateurs */
     }
 
-    .about p, .service-item, .testimonial-item, form label, form input, form textarea, form button {
+    .about p, .service-item, form label, form input, form textarea, form button {
         font-size: 1rem; /* Taille originale pour les tablettes et ordinateurs */
     }
 
-    .service-item, .testimonial-item {
+    .service-item {
         width: 250px; /* Largeur fixe pour les tablettes et ordinateurs */
         margin: 10px; /* Marge horizontale pour les tablettes et ordinateurs */
     }
 
-    .services, .testimonials {
+    .services {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
