@@ -21,11 +21,6 @@ header {
     right: 10px; /* Alignement à droite */
 }
 
-h1 {
-    margin-top: 0; /* Supprime la marge par défaut */
-}
-}
-
 .services {
     display: flex;
     justify-content: center; /* Centre les éléments horizontalement */
@@ -43,6 +38,8 @@ h1 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center; /* Centre le texte à l'intérieur de chaque élément */
     flex-shrink: 0; /* Empêche les éléments de rétrécir */
+    flex: 1; /* Les éléments s'étirent pour occuper l'espace disponible */
+    min-width: 200px; /* Largeur minimale pour chaque élément */
 }
 
 .contact {
