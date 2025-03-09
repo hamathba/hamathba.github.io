@@ -1,163 +1,73 @@
-/* Style de base */
-body {
-    font-family: 'Arial', sans-serif;
+:root {
+    --dark: #1A1A1A;
+    --neon: #00F3FF;
+    --gray: #2D2D2D;
+}
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-/******************** Nouveau Conteneur Principal ********************/
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+body {
+    background: var(--dark);
+    color: white;
+    overflow-x: hidden;
 }
 
-/******************** En-tête Modifié ********************/
-.main-header {
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
+.header {
+    padding: 2rem 10%;
+    background: rgba(26,26,26,0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
     z-index: 1000;
 }
 
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.gradient-text {
+    background: linear-gradient(45deg, #00F3FF, #0066FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.branding {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.logo {
-    width: 60px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    transform: rotate(-5deg);
-}
-
-.site-title {
-    margin: 0;
-    font-size: 1.8rem;
-    color: #003366;
-}
-
-.main-nav {
-    display: flex;
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    align-items: center;
+    padding: 8rem 10%;
 }
 
-/******************** Sections Recentrées ********************/
-.banner {
-    margin-top: 80px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 34, 68, 0.8)),
-                url('images/banner.jpg') center/cover;
-    text-align: center;
-    color: white;
+.service-box {
+    background: var(--gray);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
-.about {
-    padding: 40px 0;
-    text-align: center;
-    background: white;
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,243,255,0.2);
 }
 
-.services {
-    padding: 40px 0;
-    text-align: center;
-    background: #f9f9f9;
-}
-
-.service-item {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 300px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.contact {
-    padding: 40px 0;
-    text-align: center;
-    background: white;
-}
-
-form {
+.contact-form {
+    background: rgba(255,255,255,0.05);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid var(--neon);
     max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
+    margin: 5rem auto;
 }
 
-/******************** Pied de Page ********************/
-footer {
-    background-color: #003366;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-}
-
-/******************** Responsive Design ********************/
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .main-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .service-item {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .banner {
-        height: 200px;
-        margin-top: 120px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .service-item {
-        max-width: 350px;
-    }
-}
-
-/******************** Blog (Conserver existant) ********************/
-.blog {
-    padding: 40px 0;
-}
-
-.blog-post {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.neon-button {
+    background: transparent;
+    border: 2px solid var(--neon);
+    color: var(--neon);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    transition: all 0.3s;
 }
