@@ -29,18 +29,20 @@ h1 {
 .services {
     display: flex;
     justify-content: center; /* Centre les éléments horizontalement */
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    flex-wrap: nowrap; /* Empêche les éléments de passer à la ligne */
     gap: 20px; /* Espace entre les éléments */
     padding: 20px;
+    overflow-x: auto; /* Ajoute un défilement horizontal si nécessaire */
 }
 
 .service-item {
     background: white;
     border-radius: 8px;
     padding: 20px;
-    width: 250px;
+    width: 250px; /* Largeur fixe pour chaque élément */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center; /* Centre le texte à l'intérieur de chaque élément */
+    flex-shrink: 0; /* Empêche les éléments de rétrécir */
 }
 
 .contact {
