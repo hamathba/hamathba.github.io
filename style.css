@@ -11,6 +11,7 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
+    position: relative; /* Pour positionner le logo */
 }
 
 .logo {
@@ -38,8 +39,6 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center; /* Centre le texte à l'intérieur de chaque élément */
     flex-shrink: 0; /* Empêche les éléments de rétrécir */
-    flex: 1; /* Les éléments s'étirent pour occuper l'espace disponible */
-    min-width: 200px; /* Largeur minimale pour chaque élément */
 }
 
 .contact {
@@ -93,4 +92,3 @@ button {
 button:hover {
     background-color: #002244;
 }
-
