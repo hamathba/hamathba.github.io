@@ -94,11 +94,3 @@ button:hover {
     background-color: #002244;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.services, .contact {
-    animation: fadeIn 1s ease-in-out;
-}
