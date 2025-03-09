@@ -11,15 +11,14 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
-    position: relative; /* Permet de positionner le logo absolument */
 }
 
 .logo {
-    width: 100px; /* Ajustez la taille du logo */
-    height: auto; /* Garde les proportions */
-    position: absolute; /* Position absolue par rapport à l'en-tête */
-    top: 10px; /* Distance depuis le haut */
-    left: 10px; /* Distance depuis la gauche */
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Alignement à droite */
 }
 
 h1 {
