@@ -1,1 +1,4 @@
-
+title: TechService
+baseurl: ""  # Laissez vide si votre site est à la racine (votre-pseudo.github.io)
+url: "https://votre-pseudo.github.io"
+theme: minima
