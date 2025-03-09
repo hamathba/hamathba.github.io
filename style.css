@@ -11,7 +11,7 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
-    position: relative; /* Pour positionner le logo */
+    position: relative;
 }
 
 .logo {
@@ -19,16 +19,15 @@ header {
     height: auto;
     position: absolute;
     top: 10px;
-    right: 10px; /* Alignement à droite */
+    right: 10px;
 }
 
 .services {
     display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
-    flex-wrap: nowrap; /* Empêche les éléments de passer à la ligne */
-    gap: 20px; /* Espace entre les éléments */
+    justify-content: center;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    gap: 20px;
     padding: 20px;
-    overflow-x: auto; /* Ajoute un défilement horizontal si nécessaire */
 }
 
 .service-item {
@@ -37,7 +36,7 @@ header {
     padding: 20px;
     width: 250px; /* Largeur fixe pour chaque élément */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center; /* Centre le texte à l'intérieur de chaque élément */
+    text-align: center;
     flex-shrink: 0; /* Empêche les éléments de rétrécir */
 }
 
