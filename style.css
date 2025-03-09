@@ -1,59 +1,122 @@
 /* Style de base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
-header {
-    background-color: #003366;
+/* Bannière d'accueil */
+.banner {
+    background: url('images/banner.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     text-align: center;
+}
+
+.banner header {
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    position: relative;
+    border-radius: 10px;
 }
 
-.logo {
-    width: 100px;
-    height: auto;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.banner h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
+.banner p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+}
+
+/* À propos */
+.about {
+    padding: 40px 20px;
+    text-align: center;
+    background: white;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Services */
 .services {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
-    gap: 20px;
-    padding: 20px;
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .service-item {
     background: white;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 20px;
-    width: 250px; /* Largeur fixe pour chaque élément */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
-    flex-shrink: 0; /* Empêche les éléments de rétrécir */
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 250px;
+    transition: transform 0.3s ease;
 }
 
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item i {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+/* Témoignages */
+.testimonials {
+    padding: 40px 20px;
+    background: white;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-item {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact */
 .contact {
+    padding: 40px 20px;
+    background: #f9f9f9;
     text-align: center;
-    padding: 30px;
-    background-color: #e7e7e7;
 }
 
-footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 form {
@@ -61,33 +124,58 @@ form {
     margin: 0 auto;
     padding: 20px;
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-label {
+form label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-input, textarea {
+form input, form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
-button {
+form button {
     background-color: #003366;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-button:hover {
+form button:hover {
     background-color: #002244;
+}
+
+/* Pied de page */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #00a8ff;
 }
