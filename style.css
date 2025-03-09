@@ -1,278 +1,140 @@
-/* Style de base */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+/* Nouveau style pour l'en-tête principal */
+.main-header {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Bannière d'accueil */
-.banner {
-    background: url('images/banner.jpg') no-repeat center center/cover;
-    height: 200px; /* Réduit pour les mobiles */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative; /* Pour positionner le logo */
-}
-
-.banner header {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    width: 100%;
+.header-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Logo aligné à gauche */
-.logo-left {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 80px; /* Taille réduite */
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 60px;
     height: auto;
-}
-
-/* Contenu de l'en-tête */
-.header-content {
-    margin-left: 100px; /* Espace pour le logo */
-}
-
-.banner h1 {
-    margin: 0;
-    font-size: 2rem; /* Taille réduite pour les mobiles */
-}
-
-.banner p {
-    margin: 10px 0 0;
-    font-size: 1rem; /* Taille réduite pour les mobiles */
-}
-
-/* À propos */
-.about {
-    padding: 20px;
-    text-align: center;
-    background: white;
-}
-
-.about h2 {
-    font-size: 1.5rem; /* Taille réduite pour les mobiles */
-    margin-bottom: 15px;
-}
-
-.about p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 0.9rem; /* Taille réduite pour les mobiles */
-}
-
-/* Services */
-.services {
-    padding: 20px;
-    background: #f9f9f9;
-    text-align: center;
-}
-
-.services h2 {
-    font-size: 1.5rem; /* Taille réduite pour les mobiles */
-    margin-bottom: 15px;
-}
-
-.service-item {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0; /* Marge verticale pour les mobiles */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Pleine largeur sur mobile */
     transition: transform 0.3s ease;
 }
 
-.service-item:hover {
-    transform: translateY(-10px);
+.logo:hover {
+    transform: rotate(-5deg);
 }
 
-.service-item i {
-    font-size: 1.5rem; /* Taille réduite pour les mobiles */
+.site-title {
+    margin: 0;
+    font-size: 1.8rem;
     color: #003366;
-    margin-bottom: 10px;
+    letter-spacing: -0.5px;
 }
 
-/* Contact */
-.contact {
-    padding: 20px;
-    background: #f9f9f9;
-    text-align: center;
+.site-tagline {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 400;
 }
 
-.contact h2 {
-    font-size: 1.5rem; /* Taille réduite pour les mobiles */
-    margin-bottom: 15px;
+/* Navigation principale */
+.main-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 }
 
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 15px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    font-size: 0.9rem; /* Taille réduite pour les mobiles */
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 0.9rem; /* Taille réduite pour les mobiles */
-}
-
-form button {
-    background-color: #003366;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    font-size: 0.9rem; /* Taille réduite pour les mobiles */
-}
-
-form button:hover {
-    background-color: #002244;
-}
-
-/* Pied de page */
-footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 15px;
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
     position: relative;
-}
-
-footer .social-links {
-    margin-top: 10px;
-}
-
-footer .social-links a {
-    color: white;
-    margin: 0 10px;
-    font-size: 1rem; /* Taille réduite pour les mobiles */
     transition: color 0.3s ease;
 }
 
-footer .social-links a:hover {
-    color: #00a8ff;
-}
-
-/* Media Queries pour les écrans plus larges */
-@media (min-width: 768px) {
-    .banner {
-        height: 300px; /* Hauteur originale pour les tablettes et ordinateurs */
-    }
-
-    .banner h1 {
-        font-size: 2.5rem; /* Taille originale pour les tablettes et ordinateurs */
-    }
-
-    .banner p {
-        font-size: 1.2rem; /* Taille originale pour les tablettes et ordinateurs */
-    }
-
-    .about h2, .services h2, .contact h2 {
-        font-size: 2rem; /* Taille originale pour les tablettes et ordinateurs */
-    }
-
-    .about p, .service-item, form label, form input, form textarea, form button {
-        font-size: 1rem; /* Taille originale pour les tablettes et ordinateurs */
-    }
-
-    .service-item {
-        width: 250px; /* Largeur fixe pour les tablettes et ordinateurs */
-        margin: 10px; /* Marge horizontale pour les tablettes et ordinateurs */
-    }
-
-    .services {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
-/* Blog */
-.blog {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.blog-post {
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.blog-post h2 a {
+.nav-link:hover {
     color: #003366;
-    text-decoration: none;
 }
 
-.blog-post h2 a:hover {
-    text-decoration: underline;
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #003366;
+    transition: width 0.3s ease;
 }
 
-.post-date {
-    color: #666;
-    font-size: 0.9rem;
-}
-
-/* Styles pour le blog */
-.blog-post {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.post-date {
-    color: #666;
-    font-size: 0.9em;
-}
-
-.article-image {
+.nav-link:hover::after {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 20px 0;
 }
 
-.back-to-blog {
-    display: inline-block;
-    margin-top: 20px;
-    color: #003366;
-    text-decoration: none;
+.cta-button {
+    background: #003366;
+    color: white !important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
 
-.back-to-blog:hover {
-    text-decoration: underline;
+.cta-button:hover {
+    background: #002244;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 34, 68, 0.2);
 }
+
+/* Adaptation de la bannière existante */
+.banner {
+    margin-top: 80px; /* Espace pour l'en-tête fixe */
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 34, 68, 0.8)),
+                url('images/banner.jpg') center/cover;
+    color: white;
+}
+
+.banner-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+/* Media Queries pour la responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .banner {
+        margin-top: 120px;
+        height: 200px;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Conserver les autres styles existants... */
