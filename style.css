@@ -5,17 +5,19 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Bannière d'accueil */
 .banner {
     background: url('images/banner.jpg') no-repeat center center/cover;
-    height: 300px;
+    height: 200px; /* Réduit pour les mobiles */
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
+    padding: 20px;
 }
 
 .banner header {
@@ -26,52 +28,51 @@ body {
 
 .banner h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem; /* Taille réduite pour les mobiles */
 }
 
 .banner p {
     margin: 10px 0 0;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Taille réduite pour les mobiles */
 }
 
 /* À propos */
 .about {
-    padding: 40px 20px;
+    padding: 20px;
     text-align: center;
     background: white;
 }
 
 .about h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Taille réduite pour les mobiles */
+    margin-bottom: 15px;
 }
 
 .about p {
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.6;
+    font-size: 0.9rem; /* Taille réduite pour les mobiles */
 }
 
 /* Services */
 .services {
-    padding: 40px 20px;
+    padding: 20px;
     background: #f9f9f9;
     text-align: center;
 }
 
 .services h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Taille réduite pour les mobiles */
+    margin-bottom: 15px;
 }
 
 .service-item {
     background: white;
     border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
+    padding: 15px;
+    margin: 10px 0; /* Marge verticale pour les mobiles */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    width: 250px;
+    width: 100%; /* Pleine largeur sur mobile */
     transition: transform 0.3s ease;
 }
 
@@ -80,49 +81,48 @@ body {
 }
 
 .service-item i {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Taille réduite pour les mobiles */
     color: #003366;
     margin-bottom: 10px;
 }
 
 /* Témoignages */
 .testimonials {
-    padding: 40px 20px;
+    padding: 20px;
     background: white;
     text-align: center;
 }
 
 .testimonials h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Taille réduite pour les mobiles */
+    margin-bottom: 15px;
 }
 
 .testimonial-item {
     background: #f9f9f9;
     border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    display: inline-block;
-    width: 300px;
+    padding: 15px;
+    margin: 10px 0; /* Marge verticale pour les mobiles */
+    width: 100%; /* Pleine largeur sur mobile */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact */
 .contact {
-    padding: 40px 20px;
+    padding: 20px;
     background: #f9f9f9;
     text-align: center;
 }
 
 .contact h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Taille réduite pour les mobiles */
+    margin-bottom: 15px;
 }
 
 form {
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -132,6 +132,7 @@ form label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    font-size: 0.9rem; /* Taille réduite pour les mobiles */
 }
 
 form input, form textarea {
@@ -140,6 +141,7 @@ form input, form textarea {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 0.9rem; /* Taille réduite pour les mobiles */
 }
 
 form button {
@@ -150,6 +152,7 @@ form button {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
+    font-size: 0.9rem; /* Taille réduite pour les mobiles */
 }
 
 form button:hover {
@@ -161,7 +164,7 @@ footer {
     background-color: #003366;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     position: relative;
 }
 
@@ -172,10 +175,44 @@ footer .social-links {
 footer .social-links a {
     color: white;
     margin: 0 10px;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Taille réduite pour les mobiles */
     transition: color 0.3s ease;
 }
 
 footer .social-links a:hover {
     color: #00a8ff;
+}
+
+/* Media Queries pour les écrans plus larges */
+@media (min-width: 768px) {
+    .banner {
+        height: 300px; /* Hauteur originale pour les tablettes et ordinateurs */
+    }
+
+    .banner h1 {
+        font-size: 2.5rem; /* Taille originale pour les tablettes et ordinateurs */
+    }
+
+    .banner p {
+        font-size: 1.2rem; /* Taille originale pour les tablettes et ordinateurs */
+    }
+
+    .about h2, .services h2, .testimonials h2, .contact h2 {
+        font-size: 2rem; /* Taille originale pour les tablettes et ordinateurs */
+    }
+
+    .about p, .service-item, .testimonial-item, form label, form input, form textarea, form button {
+        font-size: 1rem; /* Taille originale pour les tablettes et ordinateurs */
+    }
+
+    .service-item, .testimonial-item {
+        width: 250px; /* Largeur fixe pour les tablettes et ordinateurs */
+        margin: 10px; /* Marge horizontale pour les tablettes et ordinateurs */
+    }
+
+    .services, .testimonials {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
