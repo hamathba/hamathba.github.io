@@ -1,0 +1,108 @@
+<style2>
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #4f46e5;
+    --text-color: #1f2937;
+    --light-gray: #f3f4f6;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f8fafc;
+    margin: 0;
+    padding: 2rem;
+}
+
+.blog {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.05em;
+}
+
+article {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+article h2 a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+article h2 a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+article p:first-of-type {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+article p {
+    color: #475569;
+    margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .blog {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2rem;
+    }
+
+    .blog h1 {
+        grid-column: 1 / -1;
+    }
+
+    article {
+        grid-column: span 4;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 1rem;
+    }
+
+    .blog h1 {
+        font-size: 2rem;
+    }
+
+    article {
+        padding: 1.5rem;
+    }
+}
+</style2>
